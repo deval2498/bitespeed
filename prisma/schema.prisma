@@ -9,7 +9,7 @@ generator client {
 
 model Contact {
   id             Int      @id @default(autoincrement())
-  phoneNumber    String?  
+  phoneNumber    Int?  
   email          String?  
   linkedId       Int?
   linkPrecedence String
@@ -22,7 +22,7 @@ model Customer {
   id                    Int      @id @default(autoincrement())
   primaryContactId      Int      @unique
   emails                String[]
-  phoneNumbers          String[]
+  phoneNumbers          Int[]
   secondaryContactIds   Int[]
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
