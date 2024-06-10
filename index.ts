@@ -1,14 +1,17 @@
-import express, { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
+import express from 'express';
 import dotenv from 'dotenv';
+import contactRoutes from './routes/contactRoutes';
 
 dotenv.config();
 
 const app = express();
-const prisma = new PrismaClient();
+const port = process.env.PORT || 3000;
+
 app.use(express.json());
 
-const port = process.env.PORT || 3000;
+// Use the contact routes
+app.use('/identify', contactRoutes);
+
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
