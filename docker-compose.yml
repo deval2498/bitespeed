@@ -2,6 +2,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:13
+    restart: always
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
@@ -16,7 +17,7 @@ services:
     environment:
       - DATABASE_URL=postgresql://user:password@postgres:5432/mydb
     ports:
-      - "3001:3000"
+      - "3000:3000"
     depends_on:
       - postgres
 
