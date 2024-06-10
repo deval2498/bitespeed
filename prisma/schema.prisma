@@ -17,3 +17,13 @@ model Contact {
   updatedAt      DateTime @updatedAt
   deletedAt      DateTime?
 }
+
+model Customer {
+  id                    Int      @id @default(autoincrement())
+  primaryContactId      Int      @unique
+  emails                String[]
+  phoneNumbers          String[]
+  secondaryContactIds   Int[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
