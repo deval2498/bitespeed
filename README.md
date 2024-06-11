@@ -27,6 +27,7 @@ A Node.js and TypeScript based identity reconciliation service using PostgreSQL 
     ```bash
     npm start
 ### Installation using docker
+Facing some issues with docker, Had to restart it 2 times for it to work need to figure this out seperately
 1. Clone the repository:
    ```bash
    git clone https://github.com/deval2498/bitespeed.git
