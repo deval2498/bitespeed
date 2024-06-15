@@ -2,6 +2,7 @@
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@types/pg": "^8.11.6",
+    "prisma": "^5.15.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
@@ -10,11 +11,10 @@
     "@types/express": "^4.17.21",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "pg": "^8.12.0",
-    "prisma": "^5.15.0"
+    "pg": "^8.12.0"
   },
   "scripts": {
-    "setup": "npm install ts-node --save-dev && npm install prisma --save-dev && npx prisma generate && npm i --save-dev @types/pg",
+    "setup": "npm i --save-dev typescript && npm install ts-node --save-dev && npm install prisma --save-dev && npx prisma generate && npm i --save-dev @types/pg",
     "start": "npm run setup && npx ts-node index.ts",
     "dev": "ts-node-dev index.ts"
   }
