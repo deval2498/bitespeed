@@ -14,7 +14,7 @@
     "pg": "^8.12.0"
   },
   "scripts": {
-    "setup": "npm i --save-dev typescript && npm install ts-node --save-dev && npm install prisma --save-dev && npx prisma generate && npm i --save-dev @types/pg",
+    "setup": "npm i --save-dev typescript && npm install ts-node --save-dev && npm install prisma --save-dev && npx prisma generate && npm install @types/pg --save-dev ",
     "start": "npm run setup && npx ts-node index.ts",
     "dev": "ts-node-dev index.ts"
   }
