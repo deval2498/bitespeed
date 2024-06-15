@@ -14,7 +14,8 @@
     "prisma": "^5.15.0"
   },
   "scripts": {
-    "start": "ts-node index.ts",
+    "setup": "npm install prisma --save-dev && npx prisma generate",
+    "start": "npm run setup && ts-node index.ts",
     "dev": "ts-node-dev index.ts"
   }
 }
