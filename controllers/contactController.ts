@@ -10,9 +10,13 @@ function isEmailValid(email: string): boolean {
 
 export const identifyContact = async (req: Request, res: Response): Promise<Response> => {
   const { email, phoneNumber }: { email?: string; phoneNumber?: number } = req.body;
-
+  
   if (!email && !phoneNumber) {
     return res.status(400).send("Email or phone number is required");
+  }
+
+  if (phoneNumber !== undefined && (!Number.isInteger(phoneNumber) || typeof phoneNumber !== 'number')) {
+    return res.status(400).json({ error: 'phoneNumber must be an integer' });
   }
 
   if (email && !isEmailValid(email)) {
