@@ -11,8 +11,6 @@ RUN npm install
 
 COPY . .
 
-RUN npx prisma generate
-
 # Copy the entrypoint and wait-for-it scripts
 COPY wait-for-it.sh ./
 COPY entrypoint.sh ./
